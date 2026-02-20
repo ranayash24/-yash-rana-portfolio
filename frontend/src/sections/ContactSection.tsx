@@ -53,7 +53,7 @@ export default function ContactSection({ profile }: { profile: Profile }) {
     <Section id="contact" eyebrow="Get in touch" title="Contact">
       <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
         <motion.div
-          className="space-y-4 text-slate-200"
+          className="space-y-4 text-slate-300"
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
@@ -65,15 +65,15 @@ export default function ContactSection({ profile }: { profile: Profile }) {
           </p>
           <div className="glass card-hover rounded-2xl p-6 text-sm">
             <p>
-              <span className="text-teal-200">Email:</span> {profile.email}
+              <span className="text-violet-300">Email:</span> {profile.email}
             </p>
             <p className="mt-2">
-              <span className="text-teal-200">Phone:</span> {profile.phone}
+              <span className="text-violet-300">Phone:</span> {profile.phone}
             </p>
             <div className="mt-4 flex gap-4 text-sm">
               <a
                 href={profile.linkedin}
-                className="text-teal-200 hover:text-teal-300"
+                className="text-violet-300 hover:text-violet-200"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -81,7 +81,7 @@ export default function ContactSection({ profile }: { profile: Profile }) {
               </a>
               <a
                 href={profile.github}
-                className="text-teal-200 hover:text-teal-300"
+                className="text-violet-300 hover:text-violet-200"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -102,7 +102,7 @@ export default function ContactSection({ profile }: { profile: Profile }) {
             <div>
               <label className="text-sm text-slate-200">Name</label>
               <input
-                className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-white focus:border-teal-300 focus:outline-none"
+                className="input-field"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
               />
@@ -114,7 +114,7 @@ export default function ContactSection({ profile }: { profile: Profile }) {
               <label className="text-sm text-slate-200">Email</label>
               <input
                 type="email"
-                className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-white focus:border-teal-300 focus:outline-none"
+                className="input-field"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
               />
@@ -125,7 +125,7 @@ export default function ContactSection({ profile }: { profile: Profile }) {
             <div>
               <label className="text-sm text-slate-200">Subject</label>
               <input
-                className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-white focus:border-teal-300 focus:outline-none"
+                className="input-field"
                 value={form.subject}
                 onChange={(e) => setForm({ ...form, subject: e.target.value })}
               />
@@ -137,7 +137,7 @@ export default function ContactSection({ profile }: { profile: Profile }) {
               <label className="text-sm text-slate-200">Message</label>
               <textarea
                 rows={4}
-                className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-white focus:border-teal-300 focus:outline-none"
+                className="input-field"
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
               />
@@ -148,7 +148,7 @@ export default function ContactSection({ profile }: { profile: Profile }) {
             <button
               type="submit"
               disabled={loading}
-              className="rounded-full bg-teal-400 px-5 py-2 text-sm font-semibold text-ink-900 transition hover:bg-teal-300 disabled:cursor-not-allowed disabled:opacity-60"
+              className="btn-primary disabled:cursor-not-allowed disabled:opacity-60"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>

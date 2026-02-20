@@ -20,22 +20,23 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
 
   return (
     <Section id="projects" eyebrow="Selected" title="Projects">
+      <span id="blog" className="block h-0 scroll-mt-24" aria-hidden="true" />
       <div className="flex flex-wrap gap-3">
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => setActive(category)}
-            className={`rounded-full px-4 py-2 text-xs font-semibold transition ${
+            className={`rounded-lg border px-4 py-2 text-xs font-semibold transition ${
               active === category
-                ? "bg-teal-400 text-ink-900"
-                : "border border-white/15 text-slate-200 hover:border-teal-300"
+                ? "border-violet-400/60 bg-violet-500/15 text-white"
+                : "border-white/10 text-slate-300 hover:border-violet-300/40 hover:text-white"
             }`}
           >
             {category}
           </button>
         ))}
       </div>
-      <div className="mt-8 grid gap-6 md:grid-cols-2">
+      <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {filtered.map((project) => (
           <motion.div
             key={project.name}

@@ -5,27 +5,19 @@ export default {
     extend: {
       colors: {
         ink: {
-          900: "#070b18",
-          800: "#0b1020",
-          700: "#111a33",
-          600: "#1a2340",
-        },
-        teal: {
-          300: "#67e8f9",
-          400: "#22d3ee",
-          500: "#06b6d4",
-        },
-        gold: {
-          300: "#fcd34d",
-          400: "#fbbf24",
+          950: "#05060d",
+          900: "#070812",
+          800: "#0b0f1f",
+          700: "#12162b",
+          600: "#1a2040",
         },
       },
       fontFamily: {
         sans: ["Sora", "system-ui", "sans-serif"],
-        display: ["Playfair Display", "serif"],
+        display: ["Sora", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        glow: "0 0 40px rgba(34, 211, 238, 0.25)",
+        glow: "0 0 40px rgba(139, 92, 246, 0.28)",
       },
       keyframes: {
         float: {

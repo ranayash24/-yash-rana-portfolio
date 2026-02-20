@@ -38,6 +38,7 @@ export default function App() {
   if (loading) {
     return (
       <div className="min-h-screen bg-ink-900 text-slate-100">
+        <div className="space-bg" aria-hidden="true" />
         <div className="section-pad py-16">
           <div className="skeleton h-8 w-40" />
           <div className="mt-6 space-y-3">
@@ -57,6 +58,7 @@ export default function App() {
   if (error || !profile) {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center bg-ink-900 text-slate-100">
+        <div className="space-bg" aria-hidden="true" />
         <p className="text-lg">{error || "Unable to load profile"}</p>
         <p className="mt-2 text-sm text-slate-400">
           Please refresh or check the backend API.
@@ -66,11 +68,8 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-ink-900">
-      <div className="ambient-bg" aria-hidden="true">
-        <div className="ambient-blob one" />
-        <div className="ambient-blob two" />
-      </div>
+    <div className="min-h-screen bg-ink-900 text-slate-100">
+      <div className="space-bg" aria-hidden="true" />
       <Navbar email={profile.email} />
       <HeroSection profile={profile} />
       <AboutSection profile={profile} />

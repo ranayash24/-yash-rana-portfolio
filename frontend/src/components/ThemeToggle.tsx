@@ -28,18 +28,66 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label="Toggle theme"
-      className="flex items-center gap-2 rounded-full border border-white/15 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200 transition hover:border-teal-300/40"
+      className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-slate-200 transition hover:border-violet-300/40 hover:text-white"
     >
       {theme === "dark" ? (
-        <span className="flex items-center gap-2">
-          <span className="h-2.5 w-2.5 rounded-full bg-teal-300 shadow-glow" />
-          Light
-        </span>
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          className="h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+        >
+          <path
+            d="M12 3a1 1 0 0 1 1 1v2.2a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1Z"
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 17.8a1 1 0 0 1 1 1V21a1 1 0 1 1-2 0v-2.2a1 1 0 0 1 1-1Z"
+            strokeLinecap="round"
+          />
+          <path
+            d="M4.2 6.2a1 1 0 0 1 1.4 0l1.6 1.6a1 1 0 1 1-1.4 1.4L4.2 7.6a1 1 0 0 1 0-1.4Z"
+            strokeLinecap="round"
+          />
+          <path
+            d="M16.8 18.8a1 1 0 0 1 1.4 0l1.6 1.6a1 1 0 0 1-1.4 1.4l-1.6-1.6a1 1 0 0 1 0-1.4Z"
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 12a1 1 0 0 1 1-1h2.2a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Z"
+            strokeLinecap="round"
+          />
+          <path
+            d="M17.8 12a1 1 0 0 1 1-1H21a1 1 0 1 1 0 2h-2.2a1 1 0 0 1-1-1Z"
+            strokeLinecap="round"
+          />
+          <path
+            d="M4.2 17.8a1 1 0 0 1 1.4 0l1.6-1.6a1 1 0 1 1 1.4 1.4l-1.6 1.6a1 1 0 0 1-1.4-1.4Z"
+            strokeLinecap="round"
+          />
+          <path
+            d="M16.8 5.2a1 1 0 0 1 1.4 0l1.6 1.6a1 1 0 1 1-1.4 1.4l-1.6-1.6a1 1 0 0 1 0-1.4Z"
+            strokeLinecap="round"
+          />
+          <circle cx="12" cy="12" r="3.6" />
+        </svg>
       ) : (
-        <span className="flex items-center gap-2">
-          <span className="h-2.5 w-2.5 rounded-full bg-slate-400" />
-          Dark
-        </span>
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          className="h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+        >
+          <path
+            d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       )}
     </button>
   );

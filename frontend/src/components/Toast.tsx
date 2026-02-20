@@ -21,7 +21,7 @@ export default function Toast({
           exit={{ opacity: 0, y: 10 }}
           className={`fixed bottom-6 right-6 z-50 rounded-xl border px-4 py-3 text-sm shadow-lg backdrop-blur ${
             toast.type === "success"
-              ? "border-teal-300/40 bg-teal-500/10 text-teal-100"
+              ? "border-violet-300/40 bg-violet-500/10 text-violet-100"
               : "border-red-300/40 bg-red-500/10 text-red-100"
           }`}
         >

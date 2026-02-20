@@ -5,7 +5,7 @@ export default function AboutSection({ profile }: { profile: Profile }) {
   return (
     <Section id="about" eyebrow="Profile" title="About">
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="space-y-4 text-base text-slate-200">
+        <div className="space-y-4 text-base text-slate-300">
           {profile.summary.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
@@ -15,7 +15,7 @@ export default function AboutSection({ profile }: { profile: Profile }) {
             systems.
           </p>
         </div>
-        <div className="glass card-hover rounded-2xl p-6 text-sm text-slate-200">
+        <div className="glass card-hover rounded-3xl p-6 text-sm text-slate-300">
           <h3 className="text-base font-semibold text-white">Working style</h3>
           <ul className="mt-4 space-y-2">
             <li>Patient, methodical approach to problem-solving.</li>

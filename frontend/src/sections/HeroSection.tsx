@@ -1,96 +1,132 @@
 import { motion } from "framer-motion";
 import { Profile } from "../types";
+import AnimatedLogo from "../components/AnimatedLogo";
 
 export default function HeroSection({ profile }: { profile: Profile }) {
   return (
     <section
       id="top"
-      className="section-pad hero-grid relative overflow-hidden pb-16 pt-20 md:pt-28"
+      className="section-pad relative flex min-h-[70vh] items-center pb-16 pt-24 md:pt-32"
     >
-      <div className="absolute inset-0 -z-10 opacity-60">
-        <div className="absolute left-[-10%] top-[-20%] h-72 w-72 animate-float rounded-full bg-teal-500/20 blur-3xl" />
-        <div className="absolute bottom-[-30%] right-[-10%] h-80 w-80 animate-float rounded-full bg-amber-400/20 blur-3xl" />
-      </div>
-      <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-        <div>
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-sm uppercase tracking-[0.3em] text-teal-300"
-          >
-            Software Developer
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-4 font-display text-4xl md:text-5xl lg:text-6xl"
-          >
-            {profile.name}
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-lg text-slate-200"
-          >
-            {profile.summary[0]}
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-6 flex flex-wrap gap-4"
-          >
-            <a
-              href={`mailto:${profile.email}`}
-              className="rounded-full bg-teal-400 px-5 py-2 text-sm font-semibold text-ink-900 transition hover:bg-teal-300"
-            >
-              Email
-            </a>
-            <a
-              href={profile.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-white/20 px-5 py-2 text-sm font-semibold text-white transition hover:border-teal-300"
-            >
-              LinkedIn
-            </a>
-            <a
-              href={profile.github}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-white/20 px-5 py-2 text-sm font-semibold text-white transition hover:border-teal-300"
-            >
-              GitHub
-            </a>
-            <a
-              href="/resume.pdf"
-              className="rounded-full border border-white/20 px-5 py-2 text-sm font-semibold text-white transition hover:border-teal-300"
-              download
-            >
-              Download Resume
-            </a>
-          </motion.div>
-        </div>
+      <div className="mx-auto flex max-w-[88rem] flex-col items-center text-center">
         <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <AnimatedLogo size={80} />
+        </motion.div>
+        <motion.div
+          className="mt-4"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+        >
+          <span className="pill">
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              className="h-4 w-4 text-violet-300"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+            >
+              <path
+                d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg>
+            {profile.location}
+          </span>
+        </motion.div>
+        <motion.p
+          className="mt-4 text-sm font-medium text-slate-300"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.08 }}
+        >
+          {profile.title}
+        </motion.p>
+        <motion.h1
+          className="mt-4 text-4xl font-semibold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl xl:text-[82px]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="glass card-hover rounded-3xl p-8"
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          {profile.name}
+        </motion.h1>
+        <motion.p
+          className="mt-6 max-w-5xl text-base text-slate-300 md:text-lg md:leading-relaxed"
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          {profile.summary[0]}
+        </motion.p>
+        <motion.div
+          className="mt-10 flex flex-wrap justify-center gap-3"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <a href={`mailto:${profile.email}`} className="btn-primary">
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              className="h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+            >
+              <path
+                d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="m22 8-10 6L2 8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Get in touch
+          </a>
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-ghost"
+          >
+            LinkedIn
+          </a>
+          <a
+            href={profile.github}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-ghost"
+          >
+            GitHub
+          </a>
+          <a href="/resume.pdf" className="btn-ghost" download>
+            Resume
+          </a>
+        </motion.div>
+        <motion.div
+          className="glass card-hover mt-12 w-full max-w-5xl rounded-3xl p-6 text-left md:p-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.35 }}
         >
           <h2 className="text-lg font-semibold text-white">Expertise highlights</h2>
-          <p className="mt-4 text-sm text-slate-200">
+          <p className="mt-3 text-sm text-slate-300">
             Based in {profile.location}. Focused on research work and production-grade
             systems with a methodical approach to problem-solving.
           </p>
-          <div className="mt-6 flex flex-wrap gap-2 text-xs">
+          <div className="mt-6 flex flex-wrap gap-2">
             {(profile.skills["Other Expertise"] || []).map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"
-              >
+              <span key={item} className="tag">
                 {item}
               </span>
             ))}

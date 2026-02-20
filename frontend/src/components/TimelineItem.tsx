@@ -20,14 +20,14 @@ export default function TimelineItem({
       viewport={{ once: true, amount: 0.5 }}
       transition={{ duration: 0.5 }}
     >
-      <span className="absolute left-2.5 top-6 h-3 w-3 rounded-full bg-teal-400 shadow-glow" />
+      <span className="absolute left-2.5 top-6 h-2.5 w-2.5 rounded-full bg-violet-400 shadow-glow" />
       <div className="glass card-hover rounded-2xl p-6">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
           <h3 className="text-lg font-semibold text-white">{title}</h3>
           <span className="text-sm text-slate-300">{meta}</span>
         </div>
-        <p className="text-sm text-teal-200">{subtitle}</p>
-        {children && <div className="mt-4 text-sm text-slate-200">{children}</div>}
+        <p className="text-sm text-violet-300">{subtitle}</p>
+        {children && <div className="mt-4 text-sm text-slate-300">{children}</div>}
       </div>
     </motion.div>
   );

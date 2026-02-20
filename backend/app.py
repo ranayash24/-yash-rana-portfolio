@@ -204,6 +204,54 @@ def get_projects() -> list[dict]:
             ],
             "categories": ["Full-stack"],
         },
+        {
+            "name": "Task Tracker CLI",
+            "description": "Command-line task tracker that stores tasks in a local JSON file, supports add/update/delete operations, and tracks status across todo, in-progress, and done.",
+            "stack": ["CLI", "JSON", "File Storage"],
+            "links": [
+                {
+                    "label": "Source Code",
+                    "url": "https://github.com/ranayash24/Task_Tracker_CLI",
+                }
+            ],
+            "categories": ["CLI", "Tooling"],
+        },
+        {
+            "name": "Unit Converter (Convertify)",
+            "description": "Full-stack unit converter with Spring Boot REST APIs and a React/Vite frontend for length, weight, and temperature conversions.",
+            "stack": ["Spring Boot", "Java", "React", "Vite"],
+            "links": [
+                {
+                    "label": "Source Code",
+                    "url": "https://github.com/ranayash24/unit-converter",
+                }
+            ],
+            "categories": ["Full-stack", "Web"],
+        },
+        {
+            "name": "Fraud Detection",
+            "description": "Fraud detection project (details available in the GitHub repository).",
+            "stack": ["Machine Learning", "Data"],
+            "links": [
+                {
+                    "label": "Source Code",
+                    "url": "https://github.com/ranayash24/Fraud_detection",
+                }
+            ],
+            "categories": ["AI/ML", "Data"],
+        },
+        {
+            "name": "Style Fusion",
+            "description": "Style fusion project (details available in the GitHub repository).",
+            "stack": ["Machine Learning", "Creative Tech"],
+            "links": [
+                {
+                    "label": "Source Code",
+                    "url": "https://github.com/ranayash24/style_fusion",
+                }
+            ],
+            "categories": ["AI/ML", "Creative"],
+        },
     ]
 
 
