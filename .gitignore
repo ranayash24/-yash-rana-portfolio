@@ -18,6 +18,9 @@ frontend/.env
 dist/
 frontend/dist/
 
+# Local DB
+backend/messages.db
+
 # OS
 .DS_Store
 Thumbs.db
